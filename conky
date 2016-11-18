@@ -1,0 +1,70 @@
+## Conky config i3; Streuli273 2015/16 from dkeg 2013 at dotshare.it ## 
+
+out_to_x no
+own_window no
+double_buffer yes
+out_to_console yes
+background no
+max_text_width 0
+update_interval 1
+short_units yes
+if_up_strictness address
+#use_spacer left
+override_utf8_locale no
+# set to 1 to disable averaging
+cpu_avg_samples 4
+border_inner_margin 0
+border_outer_margin 0
+
+#old color
+#28c3c5
+
+# add for seperator
+#{"full_text":"»","color":"\#FFFFFF","separator":false,"separator_block_width":10},\
+
+TEXT
+[
+#{"full_text":"/ ","color":"\#b294bb","separator":false,"separator_block_width":0},\
+#{"full_text":"${fs_free /}","color":"\#ffffff","separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ","color":"\#b5bd68","separator":false,"separator_block_width":0},\
+#{"full_text":"${memperc}%","color":${if_match ${memperc}>40}"\#AB4642"${else}"\#ffffff"${endif},"separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ","color":"\#cc6666","separator":false,"separator_block_width":0},\
+#{"full_text":"${cpu}%","color":${if_match ${cpu}>25}"\#AB4642"${else}"\#ffffff"${endif},"separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ${exec sensors | grep 'Core 0' | cut -c18-19}°C","color":${if_match 
+#${exec sensors | grep 'Core 0' | cut -c18-19}>48}"\#AB4642"${else}"\#ffffff"${endif},"separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ","color":${if_match ${exec test.sh}==1}"\#f0c674"${else}"\#b5bd68"${endif},"separator":false,"separator_block_width":0},\
+#{"full_text":"${if_match ${exec test.sh}==1}${upspeed enp0s20u1}${else}${upspeed wlp6s0}${endif}","color":"\#ffffff","separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ","color":${if_match ${exec test.sh}==1}"\#f0c674"${else}"\#b5bd68"${endif},"separator":false,"separator_block_width":0},\
+#{"full_text":"${if_match ${exec test.sh}==1}${downspeed enp0s20u1}${else}${downspeed wlp6s0}${endif}","color":"\#ffffff","separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ","color":"\#f0c674","separator":false,"separator_block_width":0},\
+#{"full_text":"${exec intcon.sh}","color":"\#ffffff","separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ","color":"\#b5bd68","separator":false,"separator_block_width":0},\
+#{"full_text":"${exec essid.sh}","color":"\#ffffff","separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ","color":"\#81a2be","separator":false,"separator_block_width":0},\
+#{"full_text":"${exec blue.sh}","color":"\#ffffff","separator":false,"separator_block_width":35},\
+#{"full_text":"${exec volume.sh} ","color":"\#8abeb7","separator":false,"separator_block_width":0},\
+#{"full_text":"${if_match ${exec pulsemixer --get-mute}==1}${else}${exec pulsemixer --get-volume | cut -d " " -f1}%${endif}","color":"\#ffffff","separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ","color":"\#b294bb","separator":false,"separator_block_width":0},\
+#{"full_text":"${exec printf "%.0f\n" $(exec xbacklight -get)}%","color":"\#ffffff","separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"${exec batteryicon}","color":${if_match ${exec battery}>25}"\#ffffff"${else}"\#AB4642"${endif},"separator":false,"separator_block_width":0},\
+#{"full_text":"${exec battery}%${if_match ${exec cat /sys/class/power_supply/ACAD/online}==1} ${endif}","color":${if_match ${exec
+#battery}>25}"\#ffffff"${else}"\#AB4642"${endif},"separator":false,"separator_block_width":35},\
+#\
+#{"full_text":"  ","color":"\#cc6666","separator":false,"separator_block_width":0},\
+#{"full_text":"${time %a %d.%m.%y}","color":"\#ffffff","separator":false,"separator_block_width":35},\
+#{"full_text":"  ","color":"\#81a2be","separator":false,"separator_block_width":0},\
+#{"full_text":"${time %H}:${time %M}","color":"\#ffffff","separator":false,"separator_block_width":35},\
+\
+{"full_text":"  ","color":"\#f0c674","separator":false,"separator_block_width":0},\
+{"full_text":"${uid_name 1000}@${nodename} ","color":"\#ffffff"}\
+],
