@@ -48,10 +48,15 @@ bindsym $mod+F10 exec pamixer -d 10
 bindsym $mod+F11 exec pamixer -i 10
 
 # Song control (cmus)
-bindsym $mod+F5 exec cmus-remote -u
-bindsym $mod+F6 exec cmus-remote -u
-bindsym $mod+F7 exec cmus-remote -r
-bindsym $mod+F8 exec cmus-remote -n
+#bindsym $mod+F5 exec cmus-remote -u
+#bindsym $mod+F6 exec cmus-remote -u
+#bindsym $mod+F7 exec cmus-remote -r
+#bindsym $mod+F8 exec cmus-remote -n
+bindsym $mod+F5 exec ~/Scripts/playerctl-cmus play-pause
+bindsym $mod+F6 exec ~/Scripts/playerctl-cmus stop
+bindsym $mod+F7 exec ~/Scripts/playerctl-cmus previous
+bindsym $mod+F8 exec ~/Scripts/playerctl-cmus next
+
 
 # F keys:
 # toggle dual monitor state
