@@ -52,18 +52,22 @@ bindsym $mod+F11 exec pamixer -i 10
 #bindsym $mod+F6 exec cmus-remote -u
 #bindsym $mod+F7 exec cmus-remote -r
 #bindsym $mod+F8 exec cmus-remote -n
-bindsym $mod+F5 exec ~/Scripts/playerctl-cmus play-pause
-bindsym $mod+F6 exec ~/Scripts/playerctl-cmus stop
-bindsym $mod+F7 exec ~/Scripts/playerctl-cmus previous
-bindsym $mod+F8 exec ~/Scripts/playerctl-cmus next
+bindsym $mod+F5 exec ~/scripts/playerctl-cmus play-pause
+bindsym $mod+F6 exec ~/scripts/playerctl-cmus stop
+bindsym $mod+F7 exec ~/scripts/playerctl-cmus previous
+bindsym $mod+F8 exec ~/scripts/playerctl-cmus next
 
 
 # F keys:
 # toggle dual monitor state
-bindsym $mod+F4 exec /home/dsibenik/Scripts/toggle.sh
+bindsym $mod+F4 exec /home/dsibenik/scripts/toggle.sh
 
 # start a terminal
 bindsym $mod+Return exec termite 
+
+# program shortcuts
+bindsym $mod+T exec thunar /mnt/WD-Green-1/Deluge
+bindsym $mod+Shift+s exec xdotool click 1
 
 # kill focused window
 bindsym $mod+Shift+q kill
