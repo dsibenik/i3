@@ -44,8 +44,8 @@ floating_modifier $mod
 
 # Volume controls
 bindsym $mod+F9 exec pamixer -t
-bindsym $mod+F10 exec pamixer -d 10
-bindsym $mod+F11 exec pamixer -i 10
+bindsym $mod+F10 exec pamixer -d 8
+bindsym $mod+F11 exec pamixer -i 8
 
 # Song control (cmus)
 #bindsym $mod+F5 exec cmus-remote -u
@@ -68,6 +68,7 @@ bindsym $mod+Return exec termite
 # program shortcuts
 bindsym $mod+T exec thunar /mnt/WD-Green-1/Deluge
 bindsym $mod+Shift+s exec xdotool click 1
+bindsym $mod+c exec chromium
 
 # kill focused window
 bindsym $mod+Shift+q kill
