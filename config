@@ -13,11 +13,11 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango: overpass 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 8
 
 # gaps
 gaps inner 5
@@ -130,6 +130,11 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+
+#set $WS1 "" ""
+#set $WS1 "1:"
+#set $WS2 "2:"
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -193,24 +198,26 @@ bar {
 	position top
 	height 22
 	font pango:Economica, FontAwesome 9
-    #status_command i3status --config ~/.config/i3/i3status.conf
-    status_command ~/.config/i3/songstatus.ch
-    
-#    status_command ~/.config/i3/conky.sh
+	font pango:overpass-mono 9
+
+#	status_command i3status --config ~/.config/i3/i3status.conf
+#	status_command ~/.config/i3/songstatus.ch
+	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#	status_command ~/.config/i3/conky.sh
+
 #	height 55
-#    mode dock
-#    tray_output none
+#   mode dock
+#   tray_output none
 #	position top
-#	strip_workspace_numbers yes
-#	colors {
-#            background  #000000
-#            separator   #373b41
-#            statusline  #c5c8c6
-            
-#                   border      background  text
-#            focused_workspace  #000000    #000000      #ffffff
-#            inactive_workspace  #000000     #000000     #969896
-#            urgent_workspace    #000000     #000000     #cc6666
+	strip_workspace_numbers yes
+
+	colors{
+		focused_workspace  #222222 #cccccc #000000
+		active_workspace   #333333 #5f676a #ffffff
+		inactive_workspace #333333 #222222 #888888
+		urgent_workspace   #2f343a #900000 #ffffff
+		binding_mode       #2f343a #900000 #ffffff
+	}
 }
 
 # colors
