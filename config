@@ -65,10 +65,15 @@ bindsym $mod+F4 exec /home/dsibenik/scripts/toggle.sh
 # start a terminal
 bindsym $mod+Return exec termite 
 
-# program shortcuts
+### program shortcuts
+# file manager
 bindsym $mod+T exec thunar /mnt/WD-Green-1/Deluge
-bindsym $mod+Shift+s exec xdotool click 1
+# left mouse click
+bindsym $mod+Shift+s exec xdotool click 
+# browser
 bindsym $mod+c exec chromium
+# kodi
+bindsym $mod+o exec /home/dsibenik/scripts/kodi.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
