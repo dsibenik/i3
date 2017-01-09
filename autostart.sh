@@ -1,6 +1,6 @@
 xrandr --output HDMI-0 --off --output DVI-I-1 --auto
 compton --config ~/.config/compton.conf -b
-feh --bg-scale /home/dsibenik/.config/i3/Grey-City-Ariel-Wallpaper.jpg
+feh --bg-scale ~/.config/i3/Grey-City-Ariel-Wallpaper.jpg
 guake &
 setxkbmap hr
 antimicro &
