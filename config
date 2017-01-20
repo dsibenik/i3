@@ -25,7 +25,7 @@ gaps outer 0
 smart_gaps on
 
 # autostart script
-exec /home/dsibenik/.config/i3/autostart.sh
+exec --no-startup-id /home/dsibenik/.config/i3/autostart.sh
 
 # mode in fullscreen
 mode "passthrough" {
@@ -208,7 +208,7 @@ bar {
 
 #	status_command i3status --config ~/.config/i3/i3status.conf
 #	status_command ~/.config/i3/songstatus.ch
-	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+	status_command i3blocks -c ~/.config/i3/i3blocks.conf 
 #	status_command ~/.config/i3/conky.sh
 
 #	height 55
@@ -218,12 +218,14 @@ bar {
 	strip_workspace_numbers yes
 
 	colors{
+		background #151515
 		focused_workspace  #222222 #cccccc #000000
 		active_workspace   #333333 #5f676a #ffffff
 		inactive_workspace #333333 #222222 #888888
 		urgent_workspace   #2f343a #900000 #ffffff
 		binding_mode       #2f343a #900000 #ffffff
 	}
+
 }
 
 # colors
