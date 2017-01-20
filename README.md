@@ -13,7 +13,7 @@ Scripts that I use can be found here: https://github.com/dsibenik/scripts
 
 --------
 
-* WD: i3-gaps
+* WM: i3-gaps
 
 * bar: i3blocks
 
@@ -26,5 +26,8 @@ Scripts that I use can be found here: https://github.com/dsibenik/scripts
 * Compositor: compton
 
 * Menu: dmenu
+
+* Display manager: lxdm
+	* theme: IndustrialArch
 
 -------
