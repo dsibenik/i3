@@ -21,6 +21,8 @@ Scripts that I use can be found here: https://github.com/dsibenik/scripts
 
 * Terminal: termite
 
+* Chromium theme: Material Simple Dark Grey
+
 --------
 
 * Compositor: compton
