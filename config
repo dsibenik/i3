@@ -78,7 +78,10 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb '#151515' -sb '#aaaaaa' -sf black'
+# grey colorscheme:
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb '#151515' -sb '#aaaaaa' -sf black'
+# black&white colorscheme
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb black -sb white -sf black'
 
 # change focus
 bindsym $mod+j focus left
@@ -86,7 +89,9 @@ bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+ccaron focus right
 
-# alternatively, you can use the cursor keys:
+bindsym $mod+Tab focus right
+bindsym $mod+Shift+Tab focus left
+#alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -197,9 +202,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position top
-	height 22
+	height 23
 	font pango:Economica, FontAwesome 9
-	font pango:overpass-mono 9
+	font pango:overpass 10
 
 #	status_command i3status --config ~/.config/i3/i3status.conf
 #	status_command ~/.config/i3/songstatus.ch
@@ -213,21 +218,33 @@ bar {
 	strip_workspace_numbers yes
 
 	colors{
-		background #151515
-		focused_workspace  #222222 #cccccc #000000
+#		grey colorscheme
+#		background #151515
+#		focused_workspace  #222222 #cccccc #000000
 		active_workspace   #333333 #5f676a #ffffff
-		inactive_workspace #333333 #222222 #888888
+#		inactive_workspace #333333 #222222 #888888
 		urgent_workspace   #2f343a #900000 #ffffff
-		binding_mode       #2f343a #900000 #ffffff
+#		binding_mode       #2f343a #900000 #ffffff
+
+#		black&white colorscheme
+		background #0000
+		inactive_workspace #000000 #ffffff #000000
+		focused_workspace #ffffff #000000 #ffffff
+		binding_mode 	#ffffff #ffffff #000000
 	}
 
 }
 
+# grey colorscheme:
 # colors
 # class						border		 backgr.	text		indicator	child_border
 client.unfocused			#000000ff 	 #000000ff	#ffffffff	#000000ff	#000000ff
 client.focused_inactive		#000000ff	 #000000ff	#ffffffff	#000000ff	#000000ff
-client.focused				#bbbbbb		 #bbbbbb	#000000		#bbbbbb		#bbbbbb
+#client.focused				#bbbbbb		 #bbbbbb	#000000		#bbbbbb		#bbbbbb
+
+#black colorscheme:
+client.focused				#ffffff		 #ffffff	#000000		#ffffff		#ffffff
+
 new_window pixel 4
 
 
