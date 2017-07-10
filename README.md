@@ -21,7 +21,7 @@ Scripts that I use can be found here: https://github.com/dsibenik/scripts
 
 * Terminal: termite
 
-* Chromium theme: Material Simple Dark Grey
+* Chromium theme: Complete Black Theme
 
 --------
 
