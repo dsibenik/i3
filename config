@@ -6,11 +6,12 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: overpass 8
+font pango: Source sans 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
+font pango: Source Code Pro 8
 
 # gaps
 gaps inner 4
@@ -81,7 +82,9 @@ bindsym $mod+Shift+q kill
 # grey colorscheme:
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb '#151515' -sb '#aaaaaa' -sf black'
 # black&white colorscheme
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb black -sb white -sf black'
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb black -sb white -sf black'
+#grey&orange
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb #3d3d3d -sb #e84c3d -sf white'
 
 # change focus
 bindsym $mod+j focus left
@@ -202,14 +205,13 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	position top
-	height 23
-	font pango:Economica, FontAwesome 9
-	font pango:overpass 10
+	height 22
+#	font pango:Economica, FontAwesome 9
+#	font pango:overpass 10
+#	font pango:Arialmono 11
+	font pango: Source Code Pro 12
 
-#	status_command i3status --config ~/.config/i3/i3status.conf
-#	status_command ~/.config/i3/songstatus.ch
 	status_command i3blocks -c ~/.config/i3/i3blocks.conf 
-#	status_command ~/.config/i3/conky.sh
 
 #	height 55
 #   mode dock
@@ -218,19 +220,15 @@ bar {
 	strip_workspace_numbers yes
 
 	colors{
-#		grey colorscheme
-#		background #151515
-#		focused_workspace  #222222 #cccccc #000000
 		active_workspace   #333333 #5f676a #ffffff
-#		inactive_workspace #333333 #222222 #888888
 		urgent_workspace   #2f343a #900000 #ffffff
-#		binding_mode       #2f343a #900000 #ffffff
 
-#		black&white colorscheme
-		background #0000
-		inactive_workspace #000000 #ffffff #000000
-		focused_workspace #ffffff #000000 #ffffff
-		binding_mode 	#ffffff #ffffff #000000
+		background #2d2d2d
+		statusline #e84c3d
+							#border backgrd txt
+		inactive_workspace #2d2d2d #2d2d2d #595959
+		focused_workspace #ffffff #e84c3d #ffffff
+		binding_mode 	#ffffff #e84c3d #ffffff
 	}
 
 }
@@ -238,15 +236,11 @@ bar {
 # grey colorscheme:
 # colors
 # class						border		 backgr.	text		indicator	child_border
-client.unfocused			#000000ff 	 #000000ff	#ffffffff	#000000ff	#000000ff
-client.focused_inactive		#000000ff	 #000000ff	#ffffffff	#000000ff	#000000ff
-#client.focused				#bbbbbb		 #bbbbbb	#000000		#bbbbbb		#bbbbbb
-
-#black colorscheme:
-client.focused				#ffffff		 #ffffff	#000000		#ffffff		#ffffff
+client.unfocused			#2d2d2d00 	 #2d2d2d	#ffffff		#2d2d2d00		#2d2d2d
+client.focused_inactive		#2d2d2d00	 #2d2d2d	#ffffff		#2d2d2d00		#2d2d2d
+client.focused				#e84c3dff	 #e84c3d	#ffffff		#e84c3dff		#e84c3d
 
 new_window pixel 4
-
 
 set $Locker i3lock && sleep 1
 set $mode_system System (l) lock / (e) logout / (s) suspend / (h) hibernate / (r) reboot / (Shift+s) shutdown
