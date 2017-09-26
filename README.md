@@ -4,15 +4,9 @@ dotfiles for my i3-gaps configuration
 ========
 
 Some screenshots: 
-master:
+
 * https://i.imgur.com/PJjpMKL.jpg 
 * https://i.imgur.com/6bVXe6i.jpg
-
-black_n_white:
-* https://imgur.com/a/HVVwO#ZHj5wzb
-
-orange:
-* https://imgur.com/jB6uonZ
 
 
 Scripts that I use can be found here: https://github.com/dsibenik/scripts
@@ -27,7 +21,7 @@ Scripts that I use can be found here: https://github.com/dsibenik/scripts
 
 * Terminal: termite
 
-* Chromium theme: Material Simple Dark Grey
+* Chromium theme: Complete Black Theme
 
 --------
 

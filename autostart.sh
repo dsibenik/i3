@@ -1,10 +1,13 @@
-xrandr --output HDMI-0 --auto --output DVI-D-0 --off
+#xrandr --output HDMI-0 --auto --output DVI-D-0 --off
+xrandr --output HDMI-0 --off
 compton --config ~/.config/i3/compton.conf -b
-feh --bg-scale ~/.config/i3/Grey-City-Ariel-Wallpaper.jpg
+feh --bg-scale ~/.config/i3/wallpaper.*
 guake &
 setxkbmap hr
 antimicro &
+conky -b -c ~/.config/i3/conky.conf &
 #volumeicon &
-sudo mount /dev/sdb1 /mnt/WD-Green-1
-sudo mount /dev/sdb2 /mnt/WD-Green-2
+udiskie &
+sudo mount /dev/sda1 /mnt/WD-Green-1
+sudo mount /dev/sda2 /mnt/WD-Green-2
 
