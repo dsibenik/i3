@@ -231,6 +231,7 @@ bar {
 
 		background $colorBar
 		statusline $colorFocused
+
 							#border			backgrd			txt
 		inactive_workspace	$colorBar		$colorBar		$colorBarFaded
 		focused_workspace	$colorBarText1	$colorBarText2	$colorBarText1 
