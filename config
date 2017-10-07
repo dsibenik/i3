@@ -84,7 +84,7 @@ bindsym $mod+Shift+q kill
 # black&white colorscheme
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb black -sb white -sf black'
 #grey&orange
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb #3d3d3d -sb #e84c3d -sf white'
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb #311126 -sb #fb9934 -nf #ffd5a3'
 
 # change focus
 bindsym $mod+j focus left
