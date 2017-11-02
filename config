@@ -84,7 +84,7 @@ bindsym $mod+Shift+q kill
 # black&white colorscheme
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb black -sb white -sf black'
 #grey&orange
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb #311126 -sb #fb9934 -nf #ffd5a3'
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -b -nb #311126 -sb #fb9934 -nf #ffd5a3 -sf #000000'
 
 # change focus
 bindsym $mod+j focus left
@@ -219,7 +219,8 @@ bar {
 #	font pango:overpass-mono, FontAwesome 14
 
 
-	status_command i3blocks -c ~/.config/i3/i3blocks.conf 
+#status_command i3blocks -c ~/.config/i3/i3blocks.conf 
+	i3bar_command ~/.config/i3/polybar.sh
 
 #   mode dock
 #   tray_output none
@@ -248,7 +249,7 @@ client.focused				$colorFocused	$colorFocused$	$colorBar		$colorFocused	$colorFo
 
 new_window pixel 4
 
-set $Locker i3lock && sleep 1
+set $Locker i3lock -c 000000 && sleep 1
 set $mode_system System (l) lock / (e) logout / (s) suspend / (h) hibernate / (r) reboot / (Shift+s) shutdown
 mode "$mode_system" {
 	bindsym l exec --no-startup-id $Locker, mode "default"
