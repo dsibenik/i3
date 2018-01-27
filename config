@@ -43,6 +43,15 @@ bindsym $mod+F9 exec pamixer -t
 bindsym $mod+F10 exec pamixer -d 4
 bindsym $mod+F11 exec pamixer -i 4
 
+
+# Mouse buttons
+# Volume
+bindsym --whole-window $mod+button4 exec pamixer -i 4
+bindsym --whole-window $mod+button5 exec pamixer -d 4
+# Exit window
+bindsym --whole-window $mod+button1 kill
+bindsym --whole-window $mod+button3 exec thunar /mnt/WD-Green-1/Deluge
+
 # Song control (cmus)
 #bindsym $mod+F5 exec cmus-remote -u
 #bindsym $mod+F6 exec cmus-remote -u
